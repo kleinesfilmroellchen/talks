@@ -1,0 +1,797 @@
+{
+    "$schema": "./presenter.jsonschema",
+    "version": 1,
+    "metadata": {
+        "author": "kleines Filmröllchen",
+        "title": "Das SerenityOS-Betriebssystem (und warum es euch interessieren sollte)",
+        "last-modified": "2023-02-21T01:32:00",
+        "width": 320,
+        "aspect": "16:9",
+        "color-scheme": "dark",
+        "footer-center": "{presentation_title}: {slide_title} ({slide_number}/{slides_total})",
+        "spdx-license-identifier": "CC-BY-SA-4.0",
+        "license-attribution": "Yak emoji by various authors from the SerenityOS Discord Server, discord.gg/serenityos"
+    },
+    "templates": {
+        "normal-title": {
+            "rect": [20, 10, 280, 40],
+            "color": "#000000",
+            "font": "Roboto",
+            "font-size": 11,
+            "font-weight": "Bold",
+            "text-alignment": "TopCenter",
+            "text": "Normaler Titel"
+        },
+        "small-main-text": {
+            "rect": [20, 40, 280, 160],
+            "color": "#000000",
+            "font": "Roboto",
+            "font-size": 6,
+            "font-weight": "Regular",
+            "text-alignment": "TopLeft",
+            "text": "Kleiner Haupttext,\nlinksbündig"
+        },
+        "large-code": {
+            "rect": [20, 40, 280, 40],
+            "color": "#000000",
+            "font": "Roboto Mono",
+            "font-size": 8,
+            "font-weight": "Regular",
+            "text-alignment": "TopCenter",
+            "text": "Großer Code"
+        },
+        "large-main-text": {
+            "rect": [20, 40, 280, 160],
+            "color": "#000000",
+            "font": "Roboto",
+            "font-size": 9,
+            "font-weight": "Regular",
+            "text-alignment": "TopCenter",
+            "text": "Großer Haupttext,\nzentriert"
+        },
+        "subtitle": {
+            "rect": [20, 80, 280, 160]
+        },
+        "random-text": {
+            "font": "Roboto",
+            "font-size": 6,
+            "color": "#000000",
+            "font-weight": "Regular",
+            "text-alignment": "Center",
+            "text": "Zufällig positionierter Text"
+        },
+        "random-position-1": {
+            "rect": [2, 50, 90, 20]
+        },
+        "random-position-2": {
+            "rect": [213, 40, 90, 20]
+        },
+        "random-position-3": {
+            "rect": [12, 82, 90, 20]
+        },
+        "random-position-4": {
+            "rect": [134, 111, 90, 20]
+        },
+        "random-position-5": {
+            "rect": [107, 59, 90, 20]
+        },
+        "random-position-6": {
+            "rect": [221, 154, 90, 20]
+        },
+        "random-position-7": {
+            "rect": [41, 139, 90, 20]
+        },
+        "random-position-8": {
+            "rect": [187, 86, 90, 20]
+        },
+        "random-position-9": {
+            "rect": [328, 103, 90, 20]
+        },
+        "corner-yak": {
+            "rect": [300, 160, 20, 20],
+            "scaling": "fit-smallest",
+            "scaling-mode": "smooth-pixels"
+        }
+    },
+    "slides": [
+        {
+            "title": "Titelfolie",
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["normal-title"],
+                    "text": "Das",
+                    "font-weight": "Regular"
+                },
+                {
+                    "type": "image",
+
+                    "path": "/res/graphics/brand-banner-2x.png",
+
+                    "rect": [20, 35, 280, 45],
+                    "scaling-mode": "smooth-pixels"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-main-text", "subtitle"],
+                    "text": "— Betriebssystem\n(und warum es euch interessieren sollte)",
+                    "font-size": 10
+                },
+                {
+                    "type": "text",
+
+                    "text": "kleines Filmröllchen, GPN 21",
+
+                    "rect": [20, 160, 280, 30],
+                    "color": "#003000",
+                    "font": "Roboto",
+                    "font-size": 5,
+                    "font-weight": "Regular",
+                    "text-alignment": "TopCenter"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Was bin ich?"
+                },
+                {
+                    "type": "text",
+                    "templates": ["small-main-text"],
+                    "text": "•    queere Informatik-Student*in\n\n•    @filmroellchen@chaos.social\n\n•    youtube.com/@kleinesfilmroellchen\n\n•    SerenityOS-Entwickler*in (seit 2,5 Jahren, >500 Commits)"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakea.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Was ist SerenityOS?"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-main-text"],
+                    "text": "unix-artig\nDesktop\n90-er UI-Stil\nPower-User\nFLOSS (2-clause BSD)\neinheitlich und sicher\nfrom-scratch\n\n=>  das und mehr in der nächsten Stunde"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakfused.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Ein bisschen Geschichte"
+                },
+                {
+                    "type": "text",
+                    "templates": ["small-main-text"],
+                    "text": "2018: Andreas Kling braucht dank behandelter Sucht einen Zeitvertreib\n\n2019: Kling beginnt mit YouTube, Projekt wird bekannter\n\n2020: Weg vom Einpersonenprojekt\n\n2021: Die Discord-Explosion (hier komme ich!)\n\n2022: Browser besteht Acid3, Jakt & Ladybird ins Leben gerufen\n\n2023: Wegfall 32 bit, aarch64 im Userland"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "skeleyak.png"
+                }
+            ]
+        },
+        {
+            "title": "How To Build",
+            "frames": 2,
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["normal-title"],
+                    "frames": [0, 1],
+                    "text": "Wie kann ich das laufen lassen?"
+                },
+                {
+                    "type": "text",
+                    "frames": [0],
+                    "templates": ["large-main-text"],
+                    "text": "Keine ISOs und Binaries!"
+                },
+                {
+                    "type": "image",
+                    "frames": [0],
+
+                    "path": "iso-meme.png",
+
+                    "rect": [0, 60, 320, 110],
+                    "scaling-mode": "smooth-pixels"
+                },
+                {
+                    "type": "text",
+                    "templates": ["small-main-text"],
+                    "frames": [1],
+                    "text": "Alles selber bauen!\n\n•    git clone\n•    sudo <package-manager> install <some-required-dev-packages>\n•    Meta/serenity.sh run\n•    30 min warten\n•    Serenity öffnet sich in QEMU\n\n(das ist nicht verkürzt!)"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakbrain.png"
+                }
+            ]
+        },
+        {
+            "title": "Nochmal von vorne",
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["normal-title"],
+                    "text": "Nochmal von vorne -\nwas ist das und wie funktioniert es?"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakthonk.png"
+                }
+            ]
+        },
+        {
+            "title": "UI-Stil",
+            "frames": 2,
+            "objects": [
+                {
+                    "type": "image",
+                    "frames": [0],
+
+                    "path": "screenshot-2022-11-27-13-57-27.png",
+
+                    "rect": [0, 10, 320, 160],
+                    "scaling": "fit-smallest",
+                    "scaling-mode": "nearest-neighbor"
+                },
+                {
+                    "type": "image",
+                    "frames": [1],
+
+                    "path": "uis.png",
+
+                    "rect": [0, 10, 320, 160],
+                    "scaling": "fit-smallest",
+                    "scaling-mode": "nearest-neighbor"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakkiss.png"
+                }
+            ]
+        },
+        {
+            "title": "Moderne Features",
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["normal-title"],
+                    "text": "SerenityOS – das ideale Sleeper-OS?"
+                },
+                {
+                    "type": "text",
+                    "templates": ["random-text", "random-position-1"],
+                    "text": "PDF\nPiano"
+                },
+                {
+                    "type": "text",
+                    "templates": ["random-text", "random-position-2"],
+                    "text": "Bilder: JPG, PNG, GIF, …"
+                },
+                {
+                    "type": "text",
+                    "templates": ["random-text", "random-position-3"],
+                    "text": "E-Mail\nSQL-Server"
+                },
+                {
+                    "type": "text",
+                    "templates": ["random-text", "random-position-4"],
+                    "text": "PixelPaint\nSpreadsheet"
+                },
+                {
+                    "type": "text",
+                    "templates": ["random-text", "random-position-5"],
+                    "text": "\nTextEditor, HexEditor, …"
+                },
+                {
+                    "type": "text",
+                    "templates": ["random-text", "random-position-6"],
+                    "text": "Systemverwaltung\nUNIX/POSIX-Tools"
+                },
+                {
+                    "type": "text",
+                    "templates": ["random-text", "random-position-7"],
+                    "text": "Solitaire, Schach, Snake, Flood, Wordle, …"
+                },
+                {
+                    "type": "text",
+                    "templates": ["random-text", "random-position-8"],
+                    "text": "Audio: WAV, FLAC, MP3\nVideo: VP9"
+                },
+                {
+                    "type": "text",
+                    "templates": ["random-text", "random-position-9"],
+                    "text": "High-DPI-Mode\n3D-Viewer"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakmail.png"
+                }
+            ]
+        },
+        {
+            "frames": 5,
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Es gibt einen Browser!"
+                },
+                {
+                    "type": "text",
+                    "frames": [1, 2],
+                    "templates": ["large-main-text"],
+                    "text": "… und der ist ziemlich gut!\nJavaScript, CSS, Renderer, WebAssembly, WebSockets, …"
+                },
+                {
+                    "type": "image",
+                    "frames": [2],
+                    "path": "browser-gpn.qoi",
+                    "rect": [20, 80, 280, 100]
+                },
+                {
+                    "type": "text",
+                    "frames": [3],
+                    "templates": ["large-main-text"],
+                    "text": "Compliance-Tests (27.12.22):\nJavaScript: 88,54% test262\nWebAssembly: 11,63%\nWebDriver tests (noch) nicht durchgeführt"
+                },
+                {
+                    "type": "text",
+                    "frames": [4],
+                    "templates": ["large-main-text"],
+                    "text": "Auf Linux und macOS als Ladybird verfügbar\n(z.B. auch im AUR)\n(Android experimentell)"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yaktoberfest.png"
+                }
+            ]
+        },
+        {
+            "title": "Ports",
+            "frames": 2,
+            "objects": [
+                {
+                    "type": "text",
+                    "frames": [0, 1],
+                    "templates": ["normal-title"],
+                    "rect": [20, 2, 280, 40],
+                    "text": "Aber ich will {vim,emacs,bash,Half-Life,ffmpeg,Python,Java,clang} benutzen!",
+                    "font-size": 9
+                },
+                {
+                    "type": "text",
+                    "frames": [1],
+                    "templates": ["large-main-text"],
+                    "text": "Über 260 Ports",
+                    "rect": [20, 52, 280, 20]
+                },
+                {
+                    "type": "text",
+                    "frames": [1],
+
+                    "text": "cd Ports/port-deiner-wahl && ./package.sh",
+
+                    "rect": [20, 70, 280, 20],
+                    "color": "#000000",
+                    "font": "Roboto Mono",
+                    "font-size": 8,
+                    "font-weight": "Regular",
+                    "text-alignment": "TopCenter"
+                },
+                {
+                    "type": "text",
+                    "frames": [1],
+
+                    "text": "ports.serenityos.net\nPorts/AvailablePorts.md",
+
+                    "rect": [20, 100, 280, 60],
+                    "color": "#0000FF",
+                    "font": "Roboto",
+                    "font-size": 8,
+                    "font-weight": "Regular",
+                    "text-alignment": "TopCenter"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakketysax.png"
+                }
+            ]
+        },
+        {
+            "frames": 3,
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Software-Stack"
+                },
+                {
+                    "type": "text",
+                    "frames": [0],
+                    "templates": ["large-main-text"],
+                    "text": "In SerenityOS gibt es keine Zeile fremden Code und keine externen Source-Code-Abhängigkeiten."
+                },
+                {
+                    "type": "text",
+                    "templates": ["small-main-text"],
+                    "frames": [1],
+                    "text": "Monorepo\nC++ (modifizierte Compiler, keine Standardbibliothek)\nAK\nBibliotheken: LibC, LibCore, LibGUI, LibWeb, …\nUtilities: cat, man, cp, lspci, diff, …\nServices: WindowServer, ConfigServer, RequestServer, …\nAnwendungen: HackStudio, Browser, Calculator, FontEditor, …\nKommunikation zwischen Prozessen: IPC (eigentlich RPC)\nKommunikation mit Kernel: system calls & virtuelles Dateisystem"
+                },
+                {
+                    "type": "image",
+                    "frames": [2],
+                    "path": "base-directories.png",
+                    "rect": [0, 40, 320, 110],
+                    "scaling-mode": "nearest-neighbor"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "hairyak.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Kernel"
+                },
+                {
+                    "type": "text",
+                    "templates": ["small-main-text"],
+                    "text": "•    monolithisch\n•    POSIX (surprise surprise)\n•    zunehmend architekturunabhängig (x86-64, aarch64 in Arbeit)\n•    kaum Dateisysteme außer ext2"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yaktangle.png"
+                }
+            ]
+        },
+        {
+            "title": "SMP",
+            "frames": 4,
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["normal-title"],
+                    "text": "… und Multiprozessor-Unterstützung?"
+                },
+                {
+                    "type": "text",
+                    "frames": [1, 2, 3],
+
+                    "text": "export SERENITY_CPUS=4\nMeta/serenity.sh run x86_64 GNU smp=on",
+
+                    "rect": [20, 40, 280, 60],
+                    "color": "#000000",
+                    "font": "Roboto Mono",
+                    "font-size": 8,
+                    "font-weight": "Regular",
+                    "text-alignment": "TopLeft"
+                },
+                {
+                    "type": "image",
+                    "frames": [2],
+                    "path": "smp-crash.png",
+                    "rect": [0, 80, 320, 110],
+                    "scaling-mode": "smooth-pixels"
+                },
+                {
+                    "type": "text",
+                    "frames": [3],
+                    "templates": ["large-main-text"],
+                    "text": "Nö.\n\n(Wir versuchen’s aber!)",
+                    "rect": [0, 80, 320, 110]
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yaksplode.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Hardware"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-main-text"],
+                    "rect": [20, 40, 140, 110],
+                    "text": "BIOS+VGA\nPS/2\nIDE & SATA\nPCI & ISA"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-main-text"],
+                    "rect": [140, 40, 140, 110],
+                    "text": "UHCI\nEthernet\nNVMe\nAC'97 & Intel HDA"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-main-text"],
+                    "rect": [20, 100, 280, 130],
+                    "font-size": 8,
+                    "text": "es fehlt: Message-Signaled Interrupts (MSI), USB-Gerätetreiber & EHCI+, Grafikkarten, 802.11 (WLAN), …"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakchain.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Bare-Metal-Boot!"
+                },
+                {
+                    "type": "image",
+                    "rect": [20, 40, 280, 140],
+                    "path": "bare metal.png"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakgraph.png"
+                }
+            ]
+        },
+        {
+            "title": "Sicherheit: pledge",
+            "frames": 2,
+            "objects": [
+                {
+                    "type": "text",
+                    "frames": [0, 1],
+                    "templates": ["normal-title"],
+                    "text": "Sicherheit"
+                },
+                {
+                    "type": "text",
+                    "frames": [0],
+                    "templates": ["large-code"],
+                    "text": "pledge(\"stdio rpath unix proc thread\", \"stdio\")"
+                },
+                {
+                    "type": "text",
+                    "frames": [0],
+                    "templates": ["large-main-text", "subtitle"],
+                    "text": "Dieser Prozess kann nur noch einfache I/O, Unix-Sockets, Dateien lesen, Prozesse und Threads verwalten.\nSeine Kindprozesse können nur einfache I/O.\nWeder der Prozess noch seine Kinder können diese Fähigkeiten zurückbekommen!"
+
+                },
+                {
+                    "type": "text",
+                    "frames": [1],
+
+                    "text": "ErrorOr<int> serenity_main(Main::Arguments arguments)\n{\n    // rpath is required to load .presenter files,\n    // unix, sendfd and recvfd are required\n    // to talk to ImageDecoder and WindowServer.\n    TRY(Core::System::pledge(\"stdio rpath unix sendfd recvfd\"));",
+
+                    "rect": [20, 40, 280, 40],
+                    "color": "#000000",
+                    "font": "Roboto Mono",
+                    "font-size": 5,
+                    "font-weight": "Regular",
+                    "text-alignment": "TopLeft"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakmando.png"
+                }
+            ]
+        },
+        {
+            "title": "Sicherheit: unveil",
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["normal-title"],
+                    "text": "Sicherheit"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-code"],
+                    "text": "unveil(\"~/Download\", \"rw\")"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-main-text", "subtitle"],
+                    "text": "Dieser Prozess kann nur noch den Download-Ordner lesen und schreiben."
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "ninjyak.png"
+                }
+            ]
+        },
+        {
+            "title": "Sicherheit: sonstiges",
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["normal-title"],
+                    "text": "Sicherheit"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-main-text"],
+                    "text": "KASLR, unmap-after-init, post-init-read-only, …\n-f-zero-call-used-regs, -fstack-protector-strong, …\nKeine schreib-und ausführbaren Speicherseiten (W^X)\nSyscalls nur aus libc\nProzess-Jails\nSeparate Prozesse für WebContent & ImageDecoder\nFail-Fast als Standard\n$50 Bug-Bounty-Programm für LPE, ACE & RCE",
+                    "font-size": 8
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "neoyak.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "The SerenityOS Creed"
+                },
+                {
+                    "type": "text",
+                    "templates": ["small-main-text"],
+                    "text": "1.    Free Software as in: You can literally do whatever you want. Just credit us.\n2.    Developers are not obligated to do anything beyond:\n       “You broke this, please fix it”\n3.    There are no goals, there is no plan.\n       If you want something, you implement it.\n4.    There is no code that was not written by us.\n5."
+                },
+                {
+                    "type": "image",
+                    "path": "funny discord.png",
+                    "rect": [45, 97, 110, 40],
+                    "scaling": "fit-largest"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "angelyak.png"
+                }
+            ]
+        },
+        {
+            "frames": 2,
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Warum sollte es euch interessieren?"
+                },
+                {
+                    "type": "text",
+                    "frames": [0],
+                    "templates": ["small-main-text"],
+                    "text": "•    Kompatibilität ja, Legacy nein\n\n•    Clean-Slate-Design und keine Angst for großen Refactorings\n\n•    Man kann im Jahr 2023 einen neuen hochkompatiblen Browser schreiben\n\n•    Kernel ohne C, mit OOP, kein Problem\n\n•    Eure Lieblings-Software fehlt garantiert noch – Spaß beim Hacken!"
+                },
+                {
+                    "type": "text",
+                    "frames": [1],
+                    "templates": ["large-main-text"],
+                    "text": "Geht raus und schreibt gewagte Software! Diejenigen, die behaupten, es sei unmöglich, haben es nicht versucht oder zu früh aufgegeben."
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakbait.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Jakt"
+                },
+                {
+                    "type": "text",
+
+                    "text": "mut imported_module_id = ModuleId(id: 0)\nmut maybe_loaded_module = .program.get_loaded_module(sanitized_module_name)\nif not maybe_loaded_module.has_value() {\n    let maybe_file_name = .compiler.search_for_path(module_name)\n    let file_name = match maybe_file_name.has_value() {\n        true => maybe_file_name!\n        else => .get_root_path().parent().join(module_name).replace_extension(\"jakt\")\n    }\n\n    let file_id = .compiler.get_file_id_or_register(file_name)\n\n    let parsed_namespace = .lex_and_parse_file_contents(file_id)\n\n    if not parsed_namespace.has_value() {\n        .error(\n            format(\"Module '{}' not found\", module_name)\n            module_span\n        )\n        return\n    }",
+
+                    "rect": [20, 40, 280, 140],
+                    "color": "#000000",
+                    "font": "Roboto Mono",
+                    "font-size": 4,
+                    "font-weight": "Regular",
+                    "text-alignment": "TopLeft"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakplus.qoi"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Kontakt"
+                },
+                {
+                    "type": "text",
+                    "templates":["large-main-text"],
+                    "color": "#0000FF",
+                    "text": "serenityos.org\ndiscord.gg/serenityos\ngithub.com/SerenityOS/serenity\n@filmroellchen@serenityos.social"
+                },
+                {
+                    "type": "text",
+                    "rect":[20, 100, 280, 120],
+                    "templates": ["small-main-text"],
+                    "text": "Mit Entwicklern reden! (Wir beißen nicht!)\nErste Beiträge z. B.:\n•    eigens gefundene Bugs\n•    \"good first issue\" auf GitHub\n•    Refactoring-Hilfe (DeprecatedString -> String, Core::Stream)\n•    FIXME-Jagd\nNicht vergessen: Spaß haben!"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yaktrap.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Danke fürs Zuhören!",
+                    "rect":[20, 40, 280, 40],
+                    "text-alignment": "Center"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "partyak.png"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+Das SerenityOS-Betriebssystem (und warum es euch interessieren sollte)
+
+SerenityOS ist ein neues unixoides Desktop-Betriebssystem für Power-User mit 90er UX. Seit der Entstehung 2018 besteht SerenityOS aus keiner fremden Zeile Code, besitzt aber einen fortgeschrittenen Browser und eine Vielzahl an üblichen und unüblichen Features. Aus Entwicklersicht nehme ich euch mit auf die Reise durch ein unübliches Not-Yet-Another-Linux, das trotz seiner Insignifikanz uns allen etwas beibringen kann.
