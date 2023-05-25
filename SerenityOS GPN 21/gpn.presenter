@@ -120,7 +120,8 @@
                 {
                     "type": "text",
 
-                    "text": "kleines Filmröllchen, GPN 21",
+                    "text": "kleines Filmröllchen, FSCK 2023",
+                    "_gpn_text": "kleines Filmröllchen, GPN 21",
 
                     "rect": [20, 160, 280, 30],
                     "color": "#003000",
@@ -142,7 +143,7 @@
                 {
                     "type": "text",
                     "templates": ["small-main-text"],
-                    "text": "•    queere Informatik-Student*in\n\n•    @filmroellchen@chaos.social\n\n•    youtube.com/@kleinesfilmroellchen\n\n•    SerenityOS-Entwickler*in (seit 2,5 Jahren, >500 Commits)"
+                    "text": "•    queere Informatik-Student*in\n\n•    @filmroellchen@chaos.social, @filmroellchen:chat.upi.li\n\n•    youtube.com/@kleinesfilmroellchen\n\n•    SerenityOS-Entwickler*in (seit 2,5 Jahren, >500 Commits)"
                 },
                 {
                     "type": "image",
@@ -182,7 +183,7 @@
                 {
                     "type": "text",
                     "templates": ["small-main-text"],
-                    "text": "2018: Andreas Kling braucht dank behandelter Sucht einen Zeitvertreib\n\n2019: Kling beginnt mit YouTube, Projekt wird bekannter\n\n2020: Weg vom Einpersonenprojekt\n\n2021: Die Discord-Explosion (hier komme ich!)\n\n2022: Browser besteht Acid3, Jakt & Ladybird ins Leben gerufen\n\n2023: Wegfall 32 bit, aarch64 im Userland"
+                    "text": "2018: Andreas Kling braucht dank behandelter Sucht einen Zeitvertreib\n\n2019: Kling beginnt mit YouTube, Projekt wird bekannter\n\n2020: Weg vom Einpersonenprojekt\n\n2021: Die Discord-Explosion (hier komme ich!)\n\n2022: Browser besteht Acid3, Jakt & Ladybird ins Leben gerufen\n\n2023: 32 bit geht, aarch64 kommt"
                 },
                 {
                     "type": "image",
@@ -321,7 +322,7 @@
                 {
                     "type": "text",
                     "templates": ["random-text", "random-position-8"],
-                    "text": "Audio: WAV, FLAC, MP3\nVideo: VP9"
+                    "text": "Audio: WAV, FLAC, MP3\nVideo: VP9, VP8"
                 },
                 {
                     "type": "text",
@@ -353,14 +354,14 @@
                 {
                     "type": "image",
                     "frames": [2],
-                    "path": "browser-gpn.qoi",
+                    "path": "fsck.png",
                     "rect": [20, 80, 280, 100]
                 },
                 {
                     "type": "text",
                     "frames": [3],
                     "templates": ["large-main-text"],
-                    "text": "Compliance-Tests (27.12.22):\nJavaScript: 88,54% test262\nWebAssembly: 11,63%\nWebDriver tests (noch) nicht durchgeführt"
+                    "text": "Compliance-Tests (25.05.):\nJavaScript: 86.93% (42611/49020) test262\nWebAssembly: 47.84%\nWebDriver tests (noch) nicht durchgeführt"
                 },
                 {
                     "type": "text",
@@ -473,7 +474,7 @@
                 {
                     "type": "text",
                     "templates": ["small-main-text"],
-                    "text": "•    monolithisch\n•    POSIX (surprise surprise)\n•    zunehmend architekturunabhängig (x86-64, aarch64 in Arbeit)\n•    kaum Dateisysteme außer ext2"
+                    "text": "•    monolithisch\n•    POSIX (surprise surprise)\n•    zunehmend architekturunabhängig (x86-64, aarch64 halb)\n•    kaum Dateisysteme außer ext2"
                 },
                 {
                     "type": "image",
@@ -537,20 +538,20 @@
                     "type": "text",
                     "templates": ["large-main-text"],
                     "rect": [20, 40, 140, 110],
-                    "text": "BIOS+VGA\nPS/2\nIDE & SATA\nPCI & ISA"
+                    "text": "BIOS+VGA\nPS/2\nIDE & SATA\nPCI & MSIx"
                 },
                 {
                     "type": "text",
                     "templates": ["large-main-text"],
                     "rect": [140, 40, 140, 110],
-                    "text": "UHCI\nEthernet\nNVMe\nAC'97 & Intel HDA"
+                    "text": "UHCI\nEthernet\nNVMe\nAC’97 & Intel HDA"
                 },
                 {
                     "type": "text",
                     "templates": ["large-main-text"],
                     "rect": [20, 100, 280, 130],
                     "font-size": 8,
-                    "text": "es fehlt: Message-Signaled Interrupts (MSI), USB-Gerätetreiber & EHCI+, Grafikkarten, 802.11 (WLAN), …"
+                    "text": "es fehlt: USB-Gerätetreiber & EHCI+, Grafikkarten, 802.11 (WLAN), …"
                 },
                 {
                     "type": "image",
@@ -684,7 +685,7 @@
                 {
                     "type": "image",
                     "path": "funny discord.png",
-                    "rect": [45, 97, 110, 40],
+                    "rect": [50, 97, 110, 40],
                     "scaling": "fit-largest"
                 },
                 {
@@ -767,7 +768,7 @@
                     "type": "text",
                     "rect":[20, 100, 280, 120],
                     "templates": ["small-main-text"],
-                    "text": "Mit Entwicklern reden! (Wir beißen nicht!)\nErste Beiträge z. B.:\n•    eigens gefundene Bugs\n•    \"good first issue\" auf GitHub\n•    Refactoring-Hilfe (DeprecatedString -> String, Core::Stream)\n•    FIXME-Jagd\nNicht vergessen: Spaß haben!"
+                    "text": "Mit Entwicklern reden! (Wir beißen nicht!)\nErste Beiträge z. B.:\n•    eigens gefundene Bugs\n•    „good first issue“ auf GitHub\n•    Refactoring-Hilfe (DeprecatedString -> String und andere)\n•    FIXME-Jagd\nNicht vergessen: Spaß haben!"
                 },
                 {
                     "type": "image",
