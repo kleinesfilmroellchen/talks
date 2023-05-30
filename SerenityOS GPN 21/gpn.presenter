@@ -4,11 +4,13 @@
     "metadata": {
         "author": "kleines Filmröllchen",
         "title": "Das SerenityOS-Betriebssystem (und warum es euch interessieren sollte)",
-        "last-modified": "2023-02-21T01:32:00",
+        "held": "FSCK 2023 and Gulaschprogrammiernacht 21",
+        "last-modified": "2023-05-30T19:00:00",
         "width": 320,
         "aspect": "16:9",
         "color-scheme": "dark",
         "footer-center": "{presentation_title}: {slide_title} ({slide_number}/{slides_total})",
+        "compatibility-note": "This presentation is only compatible with Fidewepre, the enhanced, web-free Presenter fork. Use kleines Filmröllchen's 'presenter-dlc' branch (https://github.com/kleinesfilmroellchen/serenity/tree/presenter-dlc)",
         "spdx-license-identifier": "CC-BY-SA-4.0",
         "license-attribution": "Yak emoji by various authors from the SerenityOS Discord Server, discord.gg/serenityos"
     },
@@ -85,7 +87,7 @@
             "rect": [187, 86, 90, 20]
         },
         "random-position-9": {
-            "rect": [328, 103, 90, 20]
+            "rect": [140, 150, 90, 20]
         },
         "corner-yak": {
             "rect": [300, 160, 20, 20],
@@ -221,7 +223,7 @@
                     "type": "text",
                     "templates": ["small-main-text"],
                     "frames": [1],
-                    "text": "Alles selber bauen!\n\n•    git clone\n•    sudo <package-manager> install <some-required-dev-packages>\n•    Meta/serenity.sh run\n•    30 min warten\n•    Serenity öffnet sich in QEMU\n\n(das ist nicht verkürzt!)"
+                    "text": "Alles selber bauen!\n\n•    git clone\n•    sudo <package-manager> install <some-required-dev-packages>\n•    Meta/serenity.sh run\n•    30-120 min warten\n•    Serenity öffnet sich in QEMU\n\n(das ist nicht verkürzt!)"
                 },
                 {
                     "type": "image",
@@ -236,7 +238,7 @@
                 {
                     "type": "text",
                     "templates": ["normal-title"],
-                    "text": "Nochmal von vorne -\nwas ist das und wie funktioniert es?"
+                    "text": "Nochmal von vorne —\nwas ist das und wie funktioniert es?"
                 },
                 {
                     "type": "image",
@@ -255,7 +257,7 @@
 
                     "path": "screenshot-2022-11-27-13-57-27.png",
 
-                    "rect": [0, 10, 320, 160],
+                    "rect": [0, 5, 320, 170],
                     "scaling": "fit-smallest",
                     "scaling-mode": "nearest-neighbor"
                 },
@@ -265,7 +267,7 @@
 
                     "path": "uis.png",
 
-                    "rect": [0, 10, 320, 160],
+                    "rect": [0, 5, 320, 170],
                     "scaling": "fit-smallest",
                     "scaling-mode": "nearest-neighbor"
                 },
@@ -337,6 +339,22 @@
             ]
         },
         {
+            "title": "Presenter",
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["large-main-text"],
+                    "text": "Diese ganze Präsentation läuft innerhalb von SerenityOS!"
+                },
+                {
+                    "type": "text",
+                    "templates": ["small-main-text"],
+                    "rect": [20, 150, 280, 30],
+                    "text": "TTF Loading & Rendering, PNG/QOI-Decoding, Window Server & IPC, ELF Dynamic Linking, Ext2 File System, VirtIO GPU Driver, PS/2 Driver, Process Scheduling, …"
+                }
+            ]
+        },
+        {
             "frames": 5,
             "objects": [
                 {
@@ -361,13 +379,13 @@
                     "type": "text",
                     "frames": [3],
                     "templates": ["large-main-text"],
-                    "text": "Compliance-Tests (25.05.):\nJavaScript: 86.93% (42611/49020) test262\nWebAssembly: 47.84%\nWebDriver tests (noch) nicht durchgeführt"
+                    "text": "Compliance-Tests (25.05.):\nJavaScript: 86,93% (42611/49020) test262\nWebAssembly: 47,84%\nWebDriver tests (noch) nicht durchgeführt"
                 },
                 {
                     "type": "text",
                     "frames": [4],
                     "templates": ["large-main-text"],
-                    "text": "Auf Linux und macOS als Ladybird verfügbar\n(z.B. auch im AUR)\n(Android experimentell)"
+                    "text": "Auf Linux und macOS als Ladybird verfügbar\n(z. B. auch im AUR)\n(Android experimentell)"
                 },
                 {
                     "type": "image",
@@ -392,7 +410,7 @@
                     "type": "text",
                     "frames": [1],
                     "templates": ["large-main-text"],
-                    "text": "Über 260 Ports",
+                    "text": "Etwa 300 Ports",
                     "rect": [20, 52, 280, 20]
                 },
                 {
@@ -581,6 +599,160 @@
             ]
         },
         {
+            "title": "Sicherheit: sonstiges",
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["normal-title"],
+                    "text": "Sicherheit"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-main-text"],
+                    "text": "KASLR, unmap-after-init, post-init-read-only, …\n-f-zero-call-used-regs, -fstack-protector-strong, …\nKeine schreib-und ausführbaren Speicherseiten (W^X)\nSyscalls nur aus libc\nProzess-Jails\nSeparate Prozesse für WebContent & ImageDecoder\nFail-Fast als Standard („VERIFY“)\n$50 Bug-Bounty-Programm für LPE, ACE & RCE",
+                    "font-size": 8
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "neoyak.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "The SerenityOS Creed"
+                },
+                {
+                    "type": "text",
+                    "templates": ["small-main-text"],
+                    "text": "1.    Free Software as in: You can literally do whatever you want. Just credit us.\n2.    Developers are not obligated to do anything beyond:\n       “You broke this, please fix it”\n3.    There are no goals, there is no plan.\n       If you want something, you implement it.\n4.    There is no code that was not written by us.\n5."
+                },
+                {
+                    "type": "image",
+                    "path": "funny discord.png",
+                    "rect": [55, 97, 110, 40],
+                    "scaling": "fit-largest"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "angelyak.png"
+                }
+            ]
+        },
+        {
+            "frames": 2,
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Warum sollte es euch interessieren?"
+                },
+                {
+                    "type": "text",
+                    "frames": [0],
+                    "templates": ["small-main-text"],
+                    "text": "•    Kompatibilität ja, Legacy nein\n\n•    Clean-Slate-Design und keine Angst for großen Refactorings\n\n•    Man kann im Jahr 2023 einen neuen hochkompatiblen Browser schreiben\n\n•    Kernel ohne C, mit OOP, kein Problem\n\n•    Eure Lieblings-Software fehlt garantiert noch – Spaß beim Hacken!"
+                },
+                {
+                    "type": "text",
+                    "frames": [1],
+                    "templates": ["large-main-text"],
+                    "text": "Geht raus und schreibt gewagte Software! Diejenigen, die behaupten, es sei unmöglich, haben es nicht versucht oder zu früh aufgegeben."
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakbait.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Kontakt"
+                },
+                {
+                    "type": "text",
+                    "templates":["large-main-text"],
+                    "color": "#0000FF",
+                    "text": "serenityos.org\ndiscord.gg/serenityos\ngithub.com/SerenityOS/serenity\n@filmroellchen@serenityos.social"
+                },
+                {
+                    "type": "text",
+                    "rect":[20, 100, 280, 120],
+                    "templates": ["small-main-text"],
+                    "text": "Mit Entwicklern reden! (Wir beißen nicht!)\nErste Beiträge z. B.:\n•    eigens gefundene Bugs\n•    „good first issue“ auf GitHub\n•    Refactoring-Hilfe (DeprecatedString -> String und andere)\n•    FIXME-Jagd\nNicht vergessen: Spaß haben!"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yaktrap.png"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Danke fürs Zuhören!",
+                    "rect": [20, 40, 280, 40],
+                    "text-alignment": "Center"
+                },
+                {
+                    "type": "text",
+                    "templates": ["small-main-text"],
+                    "rect": [20, 100, 280, 40],
+                    "text": "Dieser Talk ist meine Meinung und nie die offizielle Haltung des SerenityOS-Projekts.\nInformationen in diesem Talk sind häufig vereinfacht dargestellt.\nFolien auf github.com/kleinesfilmroellchen/talks/SerenityOS GPN 21"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "partyak.png"
+                }
+            ]
+        }
+    ],
+    "unused-slides": [
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
+                    "text": "Jakt"
+                },
+                {
+                    "type": "text",
+
+                    "text": "mut imported_module_id = ModuleId(id: 0)\nmut maybe_loaded_module = .program.get_loaded_module(sanitized_module_name)\nif not maybe_loaded_module.has_value() {\n    let maybe_file_name = .compiler.search_for_path(module_name)\n    let file_name = match maybe_file_name.has_value() {\n        true => maybe_file_name!\n        else => .get_root_path().parent().join(module_name).replace_extension(\"jakt\")\n    }\n\n    let file_id = .compiler.get_file_id_or_register(file_name)\n\n    let parsed_namespace = .lex_and_parse_file_contents(file_id)\n\n    if not parsed_namespace.has_value() {\n        .error(\n            format(\"Module '{}' not found\", module_name)\n            module_span\n        )\n        return\n    }",
+
+                    "rect": [20, 40, 280, 140],
+                    "color": "#000000",
+                    "font": "Roboto Mono",
+                    "font-size": 4,
+                    "font-weight": "Regular",
+                    "text-alignment": "TopLeft"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakplus.qoi"
+                }
+            ]
+        },
+        {
             "title": "Sicherheit: pledge",
             "frames": 2,
             "objects": [
@@ -645,152 +817,6 @@
                     "type": "image",
                     "templates": ["corner-yak"],
                     "path": "ninjyak.png"
-                }
-            ]
-        },
-        {
-            "title": "Sicherheit: sonstiges",
-            "objects": [
-                {
-                    "type": "text",
-                    "templates": ["normal-title"],
-                    "text": "Sicherheit"
-                },
-                {
-                    "type": "text",
-                    "templates": ["large-main-text"],
-                    "text": "KASLR, unmap-after-init, post-init-read-only, …\n-f-zero-call-used-regs, -fstack-protector-strong, …\nKeine schreib-und ausführbaren Speicherseiten (W^X)\nSyscalls nur aus libc\nProzess-Jails\nSeparate Prozesse für WebContent & ImageDecoder\nFail-Fast als Standard\n$50 Bug-Bounty-Programm für LPE, ACE & RCE",
-                    "font-size": 8
-                },
-                {
-                    "type": "image",
-                    "templates": ["corner-yak"],
-                    "path": "neoyak.png"
-                }
-            ]
-        },
-        {
-            "objects": [
-                {
-                    "type": "text",
-                    "role": "title",
-                    "templates": ["normal-title"],
-                    "text": "The SerenityOS Creed"
-                },
-                {
-                    "type": "text",
-                    "templates": ["small-main-text"],
-                    "text": "1.    Free Software as in: You can literally do whatever you want. Just credit us.\n2.    Developers are not obligated to do anything beyond:\n       “You broke this, please fix it”\n3.    There are no goals, there is no plan.\n       If you want something, you implement it.\n4.    There is no code that was not written by us.\n5."
-                },
-                {
-                    "type": "image",
-                    "path": "funny discord.png",
-                    "rect": [50, 97, 110, 40],
-                    "scaling": "fit-largest"
-                },
-                {
-                    "type": "image",
-                    "templates": ["corner-yak"],
-                    "path": "angelyak.png"
-                }
-            ]
-        },
-        {
-            "frames": 2,
-            "objects": [
-                {
-                    "type": "text",
-                    "role": "title",
-                    "templates": ["normal-title"],
-                    "text": "Warum sollte es euch interessieren?"
-                },
-                {
-                    "type": "text",
-                    "frames": [0],
-                    "templates": ["small-main-text"],
-                    "text": "•    Kompatibilität ja, Legacy nein\n\n•    Clean-Slate-Design und keine Angst for großen Refactorings\n\n•    Man kann im Jahr 2023 einen neuen hochkompatiblen Browser schreiben\n\n•    Kernel ohne C, mit OOP, kein Problem\n\n•    Eure Lieblings-Software fehlt garantiert noch – Spaß beim Hacken!"
-                },
-                {
-                    "type": "text",
-                    "frames": [1],
-                    "templates": ["large-main-text"],
-                    "text": "Geht raus und schreibt gewagte Software! Diejenigen, die behaupten, es sei unmöglich, haben es nicht versucht oder zu früh aufgegeben."
-                },
-                {
-                    "type": "image",
-                    "templates": ["corner-yak"],
-                    "path": "yakbait.png"
-                }
-            ]
-        },
-        {
-            "objects": [
-                {
-                    "type": "text",
-                    "role": "title",
-                    "templates": ["normal-title"],
-                    "text": "Jakt"
-                },
-                {
-                    "type": "text",
-
-                    "text": "mut imported_module_id = ModuleId(id: 0)\nmut maybe_loaded_module = .program.get_loaded_module(sanitized_module_name)\nif not maybe_loaded_module.has_value() {\n    let maybe_file_name = .compiler.search_for_path(module_name)\n    let file_name = match maybe_file_name.has_value() {\n        true => maybe_file_name!\n        else => .get_root_path().parent().join(module_name).replace_extension(\"jakt\")\n    }\n\n    let file_id = .compiler.get_file_id_or_register(file_name)\n\n    let parsed_namespace = .lex_and_parse_file_contents(file_id)\n\n    if not parsed_namespace.has_value() {\n        .error(\n            format(\"Module '{}' not found\", module_name)\n            module_span\n        )\n        return\n    }",
-
-                    "rect": [20, 40, 280, 140],
-                    "color": "#000000",
-                    "font": "Roboto Mono",
-                    "font-size": 4,
-                    "font-weight": "Regular",
-                    "text-alignment": "TopLeft"
-                },
-                {
-                    "type": "image",
-                    "templates": ["corner-yak"],
-                    "path": "yakplus.qoi"
-                }
-            ]
-        },
-        {
-            "objects": [
-                {
-                    "type": "text",
-                    "role": "title",
-                    "templates": ["normal-title"],
-                    "text": "Kontakt"
-                },
-                {
-                    "type": "text",
-                    "templates":["large-main-text"],
-                    "color": "#0000FF",
-                    "text": "serenityos.org\ndiscord.gg/serenityos\ngithub.com/SerenityOS/serenity\n@filmroellchen@serenityos.social"
-                },
-                {
-                    "type": "text",
-                    "rect":[20, 100, 280, 120],
-                    "templates": ["small-main-text"],
-                    "text": "Mit Entwicklern reden! (Wir beißen nicht!)\nErste Beiträge z. B.:\n•    eigens gefundene Bugs\n•    „good first issue“ auf GitHub\n•    Refactoring-Hilfe (DeprecatedString -> String und andere)\n•    FIXME-Jagd\nNicht vergessen: Spaß haben!"
-                },
-                {
-                    "type": "image",
-                    "templates": ["corner-yak"],
-                    "path": "yaktrap.png"
-                }
-            ]
-        },
-        {
-            "objects": [
-                {
-                    "type": "text",
-                    "role": "title",
-                    "templates": ["normal-title"],
-                    "text": "Danke fürs Zuhören!",
-                    "rect":[20, 40, 280, 40],
-                    "text-alignment": "Center"
-                },
-                {
-                    "type": "image",
-                    "templates": ["corner-yak"],
-                    "path": "partyak.png"
                 }
             ]
         }
