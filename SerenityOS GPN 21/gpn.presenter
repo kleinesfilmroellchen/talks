@@ -379,7 +379,13 @@
                     "type": "text",
                     "frames": [3],
                     "templates": ["large-main-text"],
-                    "text": "Compliance-Tests (25.05.):\nJavaScript: 86,93% (42611/49020) test262\nWebAssembly: 47,84%\nWebDriver tests (noch) nicht durchgeführt"
+                    "text": "Compliance-Tests (25.05.):\nJavaScript: 86,93% (42611/49020) test262\nWebAssembly: 47,84%\nWebDriver-Tests werden demnächst durchgeführt!"
+                },
+                {
+                    "type": "image",
+                    "frames": [3],
+                    "path": "test262.png",
+                    "rect": [20, 100, 280, 80]
                 },
                 {
                     "type": "text",
