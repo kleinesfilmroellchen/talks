@@ -165,7 +165,7 @@
                 {
                     "type": "text",
                     "templates": ["large-main-text"],
-                    "text": "unix-artig\nDesktop\n90-er UI-Stil\nPower-User\nFLOSS (2-clause BSD)\neinheitlich und sicher\nfrom-scratch\n\n=>  das und mehr in der nächsten Stunde"
+                    "text": "unix-artig\nDesktop\n90-er UI-Stil\nPower-User\nFLOSS (2-clause BSD)\neinheitlich und sicher\nfrom-scratch\n\n=>  das und mehr in der nächsten halben Stunde"
                 },
                 {
                     "type": "image",
@@ -185,7 +185,7 @@
                 {
                     "type": "text",
                     "templates": ["small-main-text"],
-                    "text": "2018: Andreas Kling braucht dank behandelter Sucht einen Zeitvertreib\n\n2019: Kling beginnt mit YouTube, Projekt wird bekannter\n\n2020: Weg vom Einpersonenprojekt\n\n2021: Die Discord-Explosion (hier komme ich!)\n\n2022: Browser besteht Acid3, Jakt & Ladybird ins Leben gerufen\n\n2023: 32 bit geht, aarch64 kommt"
+                    "text": "2018: Andreas Kling braucht dank behandelter Sucht einen Zeitvertreib\n\n2019: Kling beginnt mit YouTube, Projekt wird bekannter\n\n2020: Weg vom Einpersonenprojekt\n\n2021: Die Discord-Explosion (hier komme ich!)\n\n2022: Browser besteht Acid3, Ladybird ins Leben gerufen\n\n2023: 32 bit geht, aarch64 kommt"
                 },
                 {
                     "type": "image",
@@ -380,7 +380,7 @@
                     "type": "text",
                     "frames": [3],
                     "templates": ["large-main-text"],
-                    "text": "Compliance-Tests (25.05.):\nJavaScript: 86,93% (42611/49020) test262\nWebAssembly: 47,84%\nWebDriver-Tests werden demnächst durchgeführt!"
+                    "text": "Compliance-Tests (02.06.):\nJavaScript: 86,88% (42584/49013) test262\nWebAssembly: 47,84%\nWebDriver-Tests werden demnächst durchgeführt!"
                 },
                 {
                     "type": "image",
@@ -392,7 +392,7 @@
                     "type": "text",
                     "frames": [4],
                     "templates": ["large-main-text"],
-                    "text": "Auf Linux und macOS als Ladybird verfügbar\n(z. B. auch im AUR)\n(Android experimentell)"
+                    "text": "Auf Linux und macOS als Ladybird verfügbar\n(z. B. auch im AUR)\n(ehemals auch Android)"
                 },
                 {
                     "type": "image",
