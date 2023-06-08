@@ -5,7 +5,7 @@
         "author": "kleines Filmröllchen",
         "title": "Das SerenityOS-Betriebssystem (und warum es euch interessieren sollte)",
         "held": "FSCK 2023 and Gulaschprogrammiernacht 21",
-        "last-modified": "2023-05-30T19:00:00",
+        "last-modified": "2023-06-08T17:00:00",
         "width": 320,
         "aspect": "16:9",
         "color-scheme": "dark",
@@ -122,8 +122,8 @@
                 {
                     "type": "text",
 
-                    "text": "kleines Filmröllchen, FSCK 2023",
-                    "_gpn_text": "kleines Filmröllchen, GPN 21",
+                    "_fsck_text": "kleines Filmröllchen, FSCK 2023",
+                    "text": "kleines Filmröllchen, GPN 21",
 
                     "rect": [20, 160, 280, 30],
                     "color": "#003000",
@@ -165,7 +165,7 @@
                 {
                     "type": "text",
                     "templates": ["large-main-text"],
-                    "text": "unix-artig\nDesktop\n90-er UI-Stil\nPower-User\nFLOSS (2-clause BSD)\neinheitlich und sicher\nfrom-scratch\n\n=>  das und mehr in der nächsten halben Stunde"
+                    "text": "unixoid\nDesktop\n90-er UI-Stil\nPower-User\nFLOSS (2-clause BSD)\neinheitlich und sicher\nfrom-scratch\n\n=>  das und mehr in der nächsten Stunde"
                 },
                 {
                     "type": "image",
@@ -372,15 +372,15 @@
                 {
                     "type": "image",
                     "frames": [2],
-                    "path": "browser-fsck.png",
-                    "_path_gpn": "browser-gpn.png",
+                    "_path_fsck": "browser-fsck.png",
+                    "path": "browser-gpn.png",
                     "rect": [20, 80, 280, 100]
                 },
                 {
                     "type": "text",
                     "frames": [3],
                     "templates": ["large-main-text"],
-                    "text": "Compliance-Tests (02.06.):\nJavaScript: 86,88% (42584/49013) test262\nWebAssembly: 47,84%\nWebDriver-Tests werden demnächst durchgeführt!"
+                    "text": "Compliance-Tests (08.06.):\nJavaScript: 85% test262\nWebAssembly: 47,84%\nWebDriver-Tests werden demnächst durchgeführt!"
                 },
                 {
                     "type": "image",
@@ -466,13 +466,13 @@
                     "type": "text",
                     "frames": [0],
                     "templates": ["large-main-text"],
-                    "text": "In SerenityOS gibt es keine Zeile fremden Code und keine externen Source-Code-Abhängigkeiten."
+                    "text": "In SerenityOS gibt es keine Zeile fremden Code und keine externen Source-Code-Abhängigkeiten.\n\n(kaum übertroffene vertikale Integration)"
                 },
                 {
                     "type": "text",
                     "templates": ["small-main-text"],
                     "frames": [1],
-                    "text": "Monorepo\nC++ (modifizierte Compiler, keine Standardbibliothek)\nAK\nBibliotheken: LibC, LibCore, LibGUI, LibWeb, …\nUtilities: cat, man, cp, lspci, diff, …\nServices: WindowServer, ConfigServer, RequestServer, …\nAnwendungen: HackStudio, Browser, Calculator, FontEditor, …\nKommunikation zwischen Prozessen: IPC (eigentlich RPC)\nKommunikation mit Kernel: system calls & virtuelles Dateisystem"
+                    "text": "Monorepo\n„Serenity C++“\n  — modifizierte Compiler, keine Standardbibliothek, unüblicher Codestyle\nAK\nBibliotheken: LibC, LibCore, LibGUI, LibWeb, …\nUtilities: cat, man, cp, lspci, diff, …\nServices: WindowServer, ConfigServer, RequestServer, …\nAnwendungen: HackStudio, Browser, Calculator, FontEditor, …\nKommunikation zwischen Prozessen: IPC (eigentlich RPC)\nKommunikation mit Kernel: system calls & virtuelles Dateisystem"
                 },
                 {
                     "type": "image",
@@ -499,7 +499,7 @@
                 {
                     "type": "text",
                     "templates": ["small-main-text"],
-                    "text": "•    monolithisch\n•    POSIX (surprise surprise)\n•    zunehmend architekturunabhängig (x86-64, aarch64 halb)\n•    kaum Dateisysteme außer ext2"
+                    "text": "•    monolithisch\n•    POSIX (surprise surprise)\n•    zunehmend architekturunabhängig (x86-64, aarch64 halb)\n•    Virtuelles Dateisystem (/proc, /sys, /dev, …)\n•    kaum Dateisysteme außer ext2"
                 },
                 {
                     "type": "image",
@@ -586,6 +586,7 @@
             ]
         },
         {
+            "frames": 2,
             "objects": [
                 {
                     "type": "text",
@@ -595,13 +596,88 @@
                 },
                 {
                     "type": "image",
+                    "frames": [0],
                     "rect": [20, 40, 280, 140],
                     "path": "bare metal.png"
+                },
+                {
+                    "type": "text",
+                    "frames": [1],
+                    "templates": ["large-main-text"],
+                    "text": "Demo! (aarch64 Raspberry Pi Bare Metal Boot)"
                 },
                 {
                     "type": "image",
                     "templates": ["corner-yak"],
                     "path": "yakgraph.png"
+                }
+            ]
+        },
+        {
+            "title": "Sicherheit: pledge",
+            "frames": 2,
+            "objects": [
+                {
+                    "type": "text",
+                    "frames": [0, 1],
+                    "templates": ["normal-title"],
+                    "text": "Sicherheit"
+                },
+                {
+                    "type": "text",
+                    "frames": [0],
+                    "templates": ["large-code"],
+                    "text": "pledge(\"stdio rpath unix proc thread\", \"stdio\")"
+                },
+                {
+                    "type": "text",
+                    "frames": [0],
+                    "templates": ["large-main-text", "subtitle"],
+                    "text": "Dieser Prozess kann nur noch einfache I/O, Unix-Sockets, Dateien lesen, Prozesse und Threads verwalten.\nSeine Kindprozesse können nur einfache I/O.\nWeder der Prozess noch seine Kinder können diese Fähigkeiten zurückbekommen!"
+
+                },
+                {
+                    "type": "text",
+                    "frames": [1],
+
+                    "text": "ErrorOr<int> serenity_main(Main::Arguments arguments)\n{\n    // rpath is required to load .presenter files,\n    // unix, sendfd and recvfd are required\n    // to talk to ImageDecoder and WindowServer.\n    TRY(Core::System::pledge(\"stdio rpath unix sendfd recvfd\"));",
+
+                    "rect": [20, 40, 280, 40],
+                    "color": "#000000",
+                    "font": "Roboto Mono",
+                    "font-size": 5,
+                    "font-weight": "Regular",
+                    "text-alignment": "TopLeft"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakmando.png"
+                }
+            ]
+        },
+        {
+            "title": "Sicherheit: unveil",
+            "objects": [
+                {
+                    "type": "text",
+                    "templates": ["normal-title"],
+                    "text": "Sicherheit"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-code"],
+                    "text": "unveil(\"~/Download\", \"rw\")"
+                },
+                {
+                    "type": "text",
+                    "templates": ["large-main-text", "subtitle"],
+                    "text": "Dieser Prozess kann nur noch den Download-Ordner lesen und schreiben."
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "ninjyak.png"
                 }
             ]
         },
@@ -686,6 +762,33 @@
                     "type": "text",
                     "role": "title",
                     "templates": ["normal-title"],
+                    "text": "Jakt"
+                },
+                {
+                    "type": "text",
+
+                    "text": "mut imported_module_id = ModuleId(id: 0)\nmut maybe_loaded_module = .program.get_loaded_module(sanitized_module_name)\nif not maybe_loaded_module.has_value() {\n    let maybe_file_name = .compiler.search_for_path(module_name)\n    let file_name = match maybe_file_name.has_value() {\n        true => maybe_file_name!\n        else => .get_root_path().parent().join(module_name).replace_extension(\"jakt\")\n    }\n\n    let file_id = .compiler.get_file_id_or_register(file_name)\n\n    let parsed_namespace = .lex_and_parse_file_contents(file_id)\n\n    if not parsed_namespace.has_value() {\n        .error(\n            format(\"Module '{}' not found\", module_name)\n            module_span\n        )\n        return\n    }",
+
+                    "rect": [20, 40, 280, 140],
+                    "color": "#000000",
+                    "font": "Roboto Mono",
+                    "font-size": 4,
+                    "font-weight": "Regular",
+                    "text-alignment": "TopLeft"
+                },
+                {
+                    "type": "image",
+                    "templates": ["corner-yak"],
+                    "path": "yakplus.qoi"
+                }
+            ]
+        },
+        {
+            "objects": [
+                {
+                    "type": "text",
+                    "role": "title",
+                    "templates": ["normal-title"],
                     "text": "Kontakt"
                 },
                 {
@@ -727,103 +830,6 @@
                     "type": "image",
                     "templates": ["corner-yak"],
                     "path": "partyak.png"
-                }
-            ]
-        }
-    ],
-    "unused-slides": [
-        {
-            "objects": [
-                {
-                    "type": "text",
-                    "role": "title",
-                    "templates": ["normal-title"],
-                    "text": "Jakt"
-                },
-                {
-                    "type": "text",
-
-                    "text": "mut imported_module_id = ModuleId(id: 0)\nmut maybe_loaded_module = .program.get_loaded_module(sanitized_module_name)\nif not maybe_loaded_module.has_value() {\n    let maybe_file_name = .compiler.search_for_path(module_name)\n    let file_name = match maybe_file_name.has_value() {\n        true => maybe_file_name!\n        else => .get_root_path().parent().join(module_name).replace_extension(\"jakt\")\n    }\n\n    let file_id = .compiler.get_file_id_or_register(file_name)\n\n    let parsed_namespace = .lex_and_parse_file_contents(file_id)\n\n    if not parsed_namespace.has_value() {\n        .error(\n            format(\"Module '{}' not found\", module_name)\n            module_span\n        )\n        return\n    }",
-
-                    "rect": [20, 40, 280, 140],
-                    "color": "#000000",
-                    "font": "Roboto Mono",
-                    "font-size": 4,
-                    "font-weight": "Regular",
-                    "text-alignment": "TopLeft"
-                },
-                {
-                    "type": "image",
-                    "templates": ["corner-yak"],
-                    "path": "yakplus.qoi"
-                }
-            ]
-        },
-        {
-            "title": "Sicherheit: pledge",
-            "frames": 2,
-            "objects": [
-                {
-                    "type": "text",
-                    "frames": [0, 1],
-                    "templates": ["normal-title"],
-                    "text": "Sicherheit"
-                },
-                {
-                    "type": "text",
-                    "frames": [0],
-                    "templates": ["large-code"],
-                    "text": "pledge(\"stdio rpath unix proc thread\", \"stdio\")"
-                },
-                {
-                    "type": "text",
-                    "frames": [0],
-                    "templates": ["large-main-text", "subtitle"],
-                    "text": "Dieser Prozess kann nur noch einfache I/O, Unix-Sockets, Dateien lesen, Prozesse und Threads verwalten.\nSeine Kindprozesse können nur einfache I/O.\nWeder der Prozess noch seine Kinder können diese Fähigkeiten zurückbekommen!"
-
-                },
-                {
-                    "type": "text",
-                    "frames": [1],
-
-                    "text": "ErrorOr<int> serenity_main(Main::Arguments arguments)\n{\n    // rpath is required to load .presenter files,\n    // unix, sendfd and recvfd are required\n    // to talk to ImageDecoder and WindowServer.\n    TRY(Core::System::pledge(\"stdio rpath unix sendfd recvfd\"));",
-
-                    "rect": [20, 40, 280, 40],
-                    "color": "#000000",
-                    "font": "Roboto Mono",
-                    "font-size": 5,
-                    "font-weight": "Regular",
-                    "text-alignment": "TopLeft"
-                },
-                {
-                    "type": "image",
-                    "templates": ["corner-yak"],
-                    "path": "yakmando.png"
-                }
-            ]
-        },
-        {
-            "title": "Sicherheit: unveil",
-            "objects": [
-                {
-                    "type": "text",
-                    "templates": ["normal-title"],
-                    "text": "Sicherheit"
-                },
-                {
-                    "type": "text",
-                    "templates": ["large-code"],
-                    "text": "unveil(\"~/Download\", \"rw\")"
-                },
-                {
-                    "type": "text",
-                    "templates": ["large-main-text", "subtitle"],
-                    "text": "Dieser Prozess kann nur noch den Download-Ordner lesen und schreiben."
-                },
-                {
-                    "type": "image",
-                    "templates": ["corner-yak"],
-                    "path": "ninjyak.png"
                 }
             ]
         }
