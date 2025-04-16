@@ -8,6 +8,7 @@
         "last-modified": "2023-06-08T17:00:00",
         "width": 320,
         "aspect": "16:9",
+        "language": "de-DE",
         "color-scheme": "dark",
         "footer-center": "{presentation_title}: {slide_title} ({slide_number}/{slides_total})",
         "compatibility-note": "This presentation is only compatible with Fidewepre, the enhanced, web-free Presenter fork. Use kleines Filmröllchen's 'presenter-dlc' branch (https://github.com/kleinesfilmroellchen/serenity/tree/presenter-dlc)",
